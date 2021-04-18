@@ -13,5 +13,5 @@ namespace todoApp.Data
 
         public DbSet<Todo> Todo { get; set; }
     }
-    // dotnet aspnet-codegenerator controller -name TodoController -m Todo -dc TodoDbContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
+    
 }

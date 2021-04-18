@@ -15634,6 +15634,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/danruiyot/Downloads/kim/asp/todoApp/Views/Todo/Edit.cshtml",
+      "TargetPath": "Views\\Todo\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/danruiyot/Downloads/kim/asp/todoApp/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
@@ -15654,6 +15659,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/danruiyot/Downloads/kim/asp/todoApp/Views/Todo/Delete.cshtml",
+      "TargetPath": "Views\\Todo\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/danruiyot/Downloads/kim/asp/todoApp/Areas/Identity/Pages/_ViewStart.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -15669,6 +15679,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/danruiyot/Downloads/kim/asp/todoApp/Views/Todo/Details.cshtml",
+      "TargetPath": "Views\\Todo\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/danruiyot/Downloads/kim/asp/todoApp/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml",
       "FileKind": "mvc"
@@ -15679,8 +15694,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/danruiyot/Downloads/kim/asp/todoApp/Views/Todo/Create.cshtml",
+      "TargetPath": "Views\\Todo\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/danruiyot/Downloads/kim/asp/todoApp/Areas/Identity/Pages/Account/Register.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/danruiyot/Downloads/kim/asp/todoApp/Views/Todo/Index.cshtml",
+      "TargetPath": "Views\\Todo\\Index.cshtml",
       "FileKind": "mvc"
     },
     {

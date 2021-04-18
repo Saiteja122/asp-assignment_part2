@@ -1,3 +1,5 @@
+using todoApp.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,14 +9,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.EntityFrameworkCore;
-using todoApp.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-using todoApp.Data;
-using Microsoft.EntityFrameworkCore;
 
 namespace todoApp
 {
@@ -31,17 +29,17 @@ namespace todoApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlite(
-                    Configuration.GetConnectionString("DefaultConnection")));
-            // services.AddDatabaseDeveloperPageExceptionFilter();
+                options.UseSqlite("Data Source=SportingPower.db"));
+            services.AddDatabaseDeveloperPageExceptionFilter();
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+                
             services.AddControllersWithViews();
 
                 services.AddDbContext<TodoDbContext>(options =>
-            options.UseSqlite(Configuration.GetConnectionString("TodoDbContext")));
-
+            options.UseSqlite("Data Source=SportingPower.db"));
+            
             services.Configure<IdentityOptions>(options =>
             {
                 // Password settings.

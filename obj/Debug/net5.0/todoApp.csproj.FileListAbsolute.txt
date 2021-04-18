@@ -186,3 +186,8 @@
 /home/danruiyot/Downloads/kim/asp/todoApp/obj/Debug/net5.0/Razor/Areas/Identity/Pages/Account/_ViewImports.cshtml.g.cs
 /home/danruiyot/Downloads/kim/asp/todoApp/obj/Debug/net5.0/Razor/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml.g.cs
 /home/danruiyot/Downloads/kim/asp/todoApp/obj/Debug/net5.0/Razor/Areas/Identity/Pages/_ViewImports.cshtml.g.cs
+/home/danruiyot/Downloads/kim/asp/todoApp/obj/Debug/net5.0/Razor/Views/Todo/Create.cshtml.g.cs
+/home/danruiyot/Downloads/kim/asp/todoApp/obj/Debug/net5.0/Razor/Views/Todo/Delete.cshtml.g.cs
+/home/danruiyot/Downloads/kim/asp/todoApp/obj/Debug/net5.0/Razor/Views/Todo/Details.cshtml.g.cs
+/home/danruiyot/Downloads/kim/asp/todoApp/obj/Debug/net5.0/Razor/Views/Todo/Edit.cshtml.g.cs
+/home/danruiyot/Downloads/kim/asp/todoApp/obj/Debug/net5.0/Razor/Views/Todo/Index.cshtml.g.cs
