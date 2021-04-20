@@ -6,21 +6,27 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using todoApp.Models;
+using todoApp.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace todoApp.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        // private readonly ILogger<HomeController> _logger;
+        private readonly TodoDbContext _context;
+        public HomeController(TodoDbContext context)
+                {
+                    _context = context;
+                }
+        // public HomeController(ILogger<HomeController> logger)
+        // {
+        //     _logger = logger;
+        // }
 
-        public HomeController(ILogger<HomeController> logger)
+        public async Task<IActionResult> Index()
         {
-            _logger = logger;
-        }
-
-        public IActionResult Index()
-        {
-            return View();
+            return View(await _context.Todo.ToListAsync());
         }
 
         public IActionResult Privacy()
