@@ -34,12 +34,15 @@
              <th>
                 @Html.DisplayNameFor(model => model.Done)
             </th>
+            <th>
+                Copy
+            </th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+            <td class="title">
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
@@ -61,8 +64,11 @@
                 @if(item.Done){
                     @Html.DisplayFor(modelItem => item.Done)
                 }else{
-                    <a asp-action="Change" class="btn btn-primary" asp-route-id="@item.Id">&#10004; Done</a>
+                    <a asp-action="Change" class="btn btn-primary" id="change_btn" asp-route-id="@item.Id">&#10004; Done</a>
                 }
+            </td>
+            <td>
+                <button class="btn btn-success" onclick="copy_to_clipboard()">Copy text</button>
             </td>
         </tr>
 }

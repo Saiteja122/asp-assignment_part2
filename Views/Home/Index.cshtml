@@ -8,15 +8,15 @@
     ViewData["Title"] = "Home page";
 }
 
-@if (SignInManager.IsSignedIn(User))
+@if (!SignInManager.IsSignedIn(User))
 {
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6  col-lg-6">
         <h2>Done Tasks</h2>
-        <table class="table table-bordered">
+        <table class="table table-bordered table-responsive">
             <thead>
                 <tr>
-                    <th>
+                    <th >
                         @Html.DisplayNameFor(model => model.Title)
                     </th>
                     <th>
@@ -39,13 +39,16 @@
                     <th>
                         @Html.DisplayNameFor(model => model.Done)
                     </th>
+                    <th>
+                        copy 
+                    </th>
                 </tr>
             </thead>
             <tbody>
         @foreach (var item in Model) {
             @if(item.Done){
                 <tr>
-                    <td>
+                    <td class="title">
                         @Html.DisplayFor(modelItem => item.Title)
                     </td>
                     <td>
@@ -66,15 +69,18 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.Done)
                     </td>
+                    <td>
+                    <button class="btn btn-success"  onclick="copy_to_clipboard()">Copy text</button>
+                    </td>
                 </tr>
             }
         }
             </tbody>
         </table>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 col-lg-6">
         <h2>Not Done</h2>
-      <table class="table table-bordered">
+      <table class="table table-bordered table-responsive">
         <thead>
             <tr>
                 <th>
@@ -100,13 +106,16 @@
                     <th>
                     @Html.DisplayNameFor(model => model.Done)
                 </th>
+                <th>
+                    copy
+                </th>
             </tr>
         </thead>
         <tbody>
         @foreach (var item in Model) {
         @if(!item.Done){
             <tr>
-                <td>
+                <td class="title">
                     @Html.DisplayFor(modelItem => item.Title)
                 </td>
                 <td>
@@ -127,6 +136,9 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Done)
                 </td>
+                <td>
+                <button class="btn btn-success"  onclick="copy_to_clipboard()">Copy text</button>
+            </td>
             </tr>
         }
         }
