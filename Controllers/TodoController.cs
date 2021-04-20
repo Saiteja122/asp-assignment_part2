@@ -115,6 +115,51 @@ namespace todoApp.Controllers
             }
             return View(todo);
         }
+        
+          public async Task<IActionResult> Change(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var todo = await _context.Todo
+                .FirstOrDefaultAsync(m => m.Id == id);
+                
+            if (todo == null)
+            {
+                return NotFound();
+            }else
+            {
+                if (todo.Done)
+                {
+                    Console.WriteLine("Done");
+                }else
+                {
+                    try
+                    {
+                        todo.Done = true;
+                        _context.Update(todo);
+                        await _context.SaveChangesAsync();
+                    }catch(DbUpdateConcurrencyException)
+                    {
+                         if (!TodoExists(todo.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                    }
+
+                     Console.WriteLine("Not Done");
+                }
+                
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
 
         // GET: Todo/Delete/5
         public async Task<IActionResult> Delete(int? id)

@@ -24,16 +24,16 @@
             <th>
                 @Html.DisplayNameFor(model => model.DoneDate)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Done)
-            </th>
+           
             <th>
                 @Html.DisplayNameFor(model => model.Description)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.UserMail)
             </th>
-            <th></th>
+             <th>
+                @Html.DisplayNameFor(model => model.Done)
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -52,20 +52,22 @@
                 @Html.DisplayFor(modelItem => item.DoneDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Done)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.UserMail)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                @if(item.Done){
+                    @Html.DisplayFor(modelItem => item.Done)
+                }else{
+                    <a asp-action="Change" class="btn btn-primary" asp-route-id="@item.Id">&#10004; Done</a>
+                }
             </td>
         </tr>
 }
     </tbody>
 </table>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
