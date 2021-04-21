@@ -19,10 +19,6 @@ namespace todoApp.Controllers
                 {
                     _context = context;
                 }
-        // public HomeController(ILogger<HomeController> logger)
-        // {
-        //     _logger = logger;
-        // }
 
         public async Task<IActionResult> Index()
         {

@@ -6,9 +6,22 @@
   "background_color": "#2196f3",
   "display": "standalone", 
   "start_url": "/",
-  "staticFileGlobs": [
-        "js/**.js",
-        "css/**.css",
-        "lib/*/**.*"
+    "icons": [  
+    {
+      "src": "images/chrome-extensionmanagementpage-48-48.png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "images/chrome-favicon-16-16.png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "images/chrome-installprocess-128-128.png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "images/android-launchericon-144-144.png",
+      "sizes": "144x144"
+    }
     ]
 }
